@@ -57,6 +57,17 @@ body {
   border-radius: 999px;
   opacity: .92;
 }
+.topbar-official {
+  margin-left: auto;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 5px 14px;
+  border: 1px solid rgba(255,255,255,.6);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.topbar-official:hover { background: rgba(255,255,255,.16); }
 .icon-btn {
   display: none;
   background: transparent;
@@ -185,6 +196,7 @@ body {
 
 /* ---------- 首頁 Hero ---------- */
 .hero { max-width: 760px; }
+.hero-cover { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 16px; margin-bottom: 26px; background: #fff; }
 .hero-kicker {
   margin: 0 0 12px;
   font-size: 13px;
@@ -233,6 +245,7 @@ body {
 
 /* ---------- 單元內文 ---------- */
 .unit { max-width: 768px; }
+.unit-hero { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 14px; margin-bottom: 26px; background: #fff; }
 .unit-head { margin-bottom: 30px; padding-bottom: 22px; border-bottom: 2px solid var(--line); }
 .unit-chapter {
   display: inline-block;
@@ -334,6 +347,29 @@ body {
 .navbtn strong { font-size: 14.5px; color: var(--ink); font-weight: 700; line-height: 1.4; }
 .navbtn.next { text-align: right; margin-left: auto; }
 
+/* 課程結尾：官方網站 CTA */
+.course-end {
+  margin-top: 44px;
+  padding: 30px 28px;
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  text-align: center;
+}
+.course-end-kicker { margin: 0 0 8px; font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: .5px; }
+.course-end-text { margin: 0 auto 18px; max-width: 520px; font-size: 15.5px; color: var(--ink-soft); line-height: 1.8; }
+.course-end-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 12px 26px;
+  border-radius: 11px;
+}
+.course-end-btn:hover { background: var(--accent-dark); }
+
 /* ---------- 響應式 ---------- */
 .overlay {
   display: none;
@@ -344,6 +380,8 @@ body {
 }
 @media (max-width: 860px) {
   .icon-btn { display: block; }
+  .topbar-tag { display: none; }
+  .topbar-official { font-size: 12px; padding: 4px 10px; }
   .content { padding: 28px 22px 80px; }
   .hero-title { font-size: 32px; }
   .hero-stats { gap: 22px; }

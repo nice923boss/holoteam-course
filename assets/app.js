@@ -86,6 +86,7 @@
     var content = document.getElementById('content');
     content.innerHTML =
       '<div class="hero">' +
+        ((DATA[0] && DATA[0].image) ? '<img class="hero-cover" src="' + DATA[0].image + '" alt="">' : '') +
         '<p class="hero-kicker">自主運營虛擬團隊 AI　・　開發全紀錄</p>' +
         '<h1 class="hero-title">HoloTeam 從零開始</h1>' +
         '<p class="hero-lead">從一堆 Markdown 規則，到能獨立安裝的桌面軟體。這套文件帶你一站一站看懂：一個人怎麼用 AI 長出一支會自己找事做、自己接力、自己記得事情的虛擬團隊，以及它走過哪些彎路、放棄過哪些方案。</p>' +
@@ -109,12 +110,20 @@
 
     content.innerHTML =
       '<article class="unit">' +
+        (u.image ? '<img class="unit-hero" src="' + u.image + '" alt="">' : '') +
         '<div class="unit-head">' +
           '<span class="unit-chapter">' + escapeHtml(u.chapter) + '</span>' +
           '<h1 class="unit-title">' + escapeHtml(u.title) + '</h1>' +
           '<p class="unit-meta">單元 ' + escapeHtml(u.num) + '　・　預估閱讀 ' + u.minutes + ' 分鐘</p>' +
         '</div>' +
         '<div class="md">' + renderMarkdown(u.markdown) + '</div>' +
+        (!next
+          ? '<div class="course-end">' +
+              '<p class="course-end-kicker">課程到這裡告一段落</p>' +
+              '<p class="course-end-text">想看單機版實際長什麼樣子、親自體驗 HoloTeam 嗎？歡迎前往官方網站進一步了解。</p>' +
+              '<a class="course-end-btn" href="https://holoteam.cattravelworld.com/" target="_blank" rel="noopener">前往 HoloTeam 官方網站 ↗</a>' +
+            '</div>'
+          : '') +
         '<nav class="unit-nav">' +
           (prev
             ? '<a class="navbtn prev" href="#' + prev.id + '"><span>上一篇</span><strong>' + escapeHtml(prev.title) + '</strong></a>'
