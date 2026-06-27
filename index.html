@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HoloTeam 從零開始</title>
+  <meta name="description" content="從純文字規則到桌面軟體，一套自主運營虛擬團隊 AI 的演化全紀錄。共 28 個單元。">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button id="sidebarToggle" class="icon-btn" aria-label="開關目錄">☰</button>
+    <a class="topbar-title" href="#" id="homeLink">HoloTeam 從零開始</a>
+    <span class="topbar-tag">線上課程</span>
+  </header>
+
+  <div class="layout">
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="course-head">
+        <h1 class="course-title">HoloTeam 從零開始</h1>
+        <p class="course-sub">從零理解一套自主虛擬團隊 AI 怎麼一步步長出來</p>
+        <input id="search" class="search" type="search" placeholder="搜尋單元或內容…" autocomplete="off">
+        <p class="course-meta" id="courseMeta"></p>
+      </div>
+      <nav id="toc" class="toc"></nav>
+      <div class="credit">製作者：黃政文</div>
+    </aside>
+
+    <main class="content" id="content"></main>
+  </div>
+
+  <script src="assets/marked.min.js"></script>
+  <script src="assets/purify.min.js"></script>
+  <script src="assets/content.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
