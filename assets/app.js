@@ -3,7 +3,7 @@
   'use strict';
 
   var DATA = window.COURSE_DATA || [];
-  var CHAPTER_ORDER = ['序章', '第一部・SKILL 版', '轉折', '第二部・單機版'];
+  var CHAPTER_ORDER = ['序章', '第一部・SKILL 版', '轉折', '第二部・單機版', '第三部・持續進化'];
 
   function escapeHtml(s) {
     return String(s).replace(/[&<>"]/g, function (c) {
